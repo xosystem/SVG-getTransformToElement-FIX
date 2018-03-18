@@ -8,10 +8,10 @@ Copy this code and paste it in your project
 ```
 if( ! SVGElement.prototype.getTransformToElement)
 {
-	SVGElement.prototype.getTransformToElement = function( _element )
-	{
-		return _element.getCTM().inverse().multiply(  this.getCTM()  );
-	};
+	_.getTransformToElement = function( _element )
+    {
+        return _element.getScreenCTM().inverse().multiply(  this.getScreenCTM()  );
+    };
 }
 
 ```

@@ -8,7 +8,7 @@ Copy this code and paste it in your project
 ```
 if( ! SVGElement.prototype.getTransformToElement)
 {
-	_.getTransformToElement = function( _element )
+	SVGElement.prototype.getTransformToElement = function( _element )
     {
         return _element.getScreenCTM().inverse().multiply(  this.getScreenCTM()  );
     };
